@@ -48,7 +48,7 @@ Welcome to our Django REST Framework project! Follow these steps to set up the p
 
    Access the project at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-   For swagger at  [http://127.0.0.1:8000/swagger](http://127.0.0.1:8000/swagger)
+   For swagger at  [http://127.0.0.1:8000/swagger](http://127.0.0.1:8000/swagger/)
 
 7. **Test APIs**:
 
