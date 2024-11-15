@@ -3,9 +3,14 @@ from django.contrib.auth.models import User
 from .models import Post, Like, UserProfile
 from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError
+from rest_framework.validators import UniqueValidator
 
 class UserSerializer(serializers.ModelSerializer):
-    mobile = serializers.CharField(write_only=True) 
+    mobile = serializers.CharField(write_only=True)
+    username = serializers.CharField(
+        required=True,
+        validators=[UniqueValidator(queryset=User.objects.all(), message="This username is already taken.")]
+    )
     
     class Meta:
         model = User
